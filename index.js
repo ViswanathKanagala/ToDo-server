@@ -60,4 +60,3 @@ mongoConnect(() => {
   console.log('connected to 5000')
 });
 
-export default app;
