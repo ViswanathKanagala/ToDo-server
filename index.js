@@ -58,3 +58,5 @@ app.get('/',(req,res)=>{
 mongoConnect(() => {
   app.listen(5000);
 });
+
+export default app;
