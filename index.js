@@ -56,7 +56,8 @@ app.get('/',(req,res)=>{
 })
 
 mongoConnect(() => {
-  console.log('mongo connected')
+  app.listen(5000)
+  console.log('connected to 5000')
 });
 
 export default app;
