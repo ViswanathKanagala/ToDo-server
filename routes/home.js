@@ -7,9 +7,10 @@ const fetchAll = require("../controllers/storage").fetchAll;
 const postControllers = require("../controllers/posts");
 const { GridFsStorage } = require("multer-gridfs-storage");
 const multer = require("multer");
+require("dotenv").config()
 
 const storage = new GridFsStorage({
-  url: "mongodb+srv://viswa:1234@image.q6t7tbt.mongodb.net/?retryWrites=true&w=majority",
+  url: process.env.MONGO_URI,
   file: (req, file) => {
     console.log(req);
     const random = Math.floor(Math.random() * 10000);

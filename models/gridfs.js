@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 
 
-const mongoUrl = "mongodb+srv://viswa:1234@image.q6t7tbt.mongodb.net/?retryWrites=true&w=majority";
+const mongoUrl = process.env.MONGO_URI;
 const connection = mongoose.createConnection(mongoUrl);
 
 let gfs;
@@ -19,7 +19,7 @@ connection.once('open', () => {
 })
 
 const storage =  GridFsStorage({
-  url: "mongodb+srv://viswa:1234@image.q6t7tbt.mongodb.net/?retryWrites=true&w=majority",
+  url: process.env.MONGO_URI,
   file: (req, file) => {
     console.log(file);
     return new Promise((resolve, reject) => {
