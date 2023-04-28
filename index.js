@@ -13,7 +13,8 @@ const app = express();
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger/api.json");
 
-const helmet = require('helmet')
+const helmet = require('helmet');
+const { hostname } = require("os");
 
 app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -51,8 +52,10 @@ app.get('/',(req,res)=>{
 })
 
 mongoConnect(() => {
-  // app.listen(5000)
-  console.log('connected to 5000')
+  // 
+  app.listen(5000,()=>{
+    console.log('connected to 5000')
+  })
 });
 
 
