@@ -23,6 +23,11 @@ app.use(express.json());
 app.use(cors());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+// const logStream = rfs.createStream("storage.log", {
+//   interval: "1d",
+//   path: path.join(__dirname, "logs"),
+// });
+// app.use(morgan("combined", { stream: logStream, immediate: true}));
 
 const mongoDbURI= "mongodb+srv://viswa:1234@image.q6t7tbt.mongodb.net/?retryWrites=true&w=majority"
 

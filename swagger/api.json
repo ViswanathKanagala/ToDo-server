@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "Take Art to Heart API Documentation",
+    "title": "Todo API Documentation",
     "description": "List of all API endpoints which can be used in your applications."
   },
   "basePath": "/",
