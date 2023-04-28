@@ -39,11 +39,6 @@ app.use(sessions({
 }))
 
 
-const logStream = rfs.createStream("storage.log", {
-  interval: "1d",
-  path: path.join(__dirname, "logs"),
-});
-app.use(morgan("combined", { stream: logStream, immediate: true}));
 
 app.use('*', (req, res, next) => {
   next()
