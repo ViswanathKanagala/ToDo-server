@@ -59,3 +59,4 @@ mongoConnect(() => {
 });
 
 
+module.exports = app
