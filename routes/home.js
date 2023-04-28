@@ -26,7 +26,6 @@ const upload = multer({ storage });
 
 router.get("/profile", fetchAll);
 
-
 router.get("/view", userController.displayUsers);
 
 router.post("/login", userController.logUser);
